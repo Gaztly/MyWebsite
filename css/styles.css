@@ -9,8 +9,16 @@ h1 {
 body {
   background-color: gray;
 }
-img {
-  border: 5px green;
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
 }
 
 .titles {
@@ -20,7 +28,11 @@ img {
   height: 800px;
   background-size: 540px;
 }
-
+.img2 {
+  background-image: url("https://github.com/Gaztly/MyWebsite/blob/master/images/img-2.jpg?raw=true");
+  border-image-width: 500px;
+  background-size: 1600px 1920px;
+}
 #fonts {
   color: black;
   text-align: center;
