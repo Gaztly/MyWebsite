@@ -1,0 +1,26 @@
+h1 {
+  color: darkgrey;
+  text-align: center;
+  background-image: ;
+  margin: 10px 100px 100px 100px;
+  border-radius: 5px;
+  border: 5px silver;
+  border-style: ridge;
+}
+body {
+  background-color: gray;
+}
+img {
+  border: 5px green;
+}
+
+.titles {
+  font-weight: bolder;
+  font: size 500px;
+  font-weight: 200;
+}
+
+#fonts {
+  font-weight: bolder;
+  font: size 500px;
+}
