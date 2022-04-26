@@ -23,10 +23,10 @@ body {
 
 .titles {
   background-image: url("https://github.com/Gaztly/MyWebsite/blob/master/images/img-home.jpg?raw=true");
-  border-image-width: 500px;
-  background-repeat: repeat;
+  border-image-width: auto;
+  background-repeat: no-repeat;
   height: 800px;
-  background-size: 540px;
+  background-size: cover;
 }
 .img2 {
   background-image: url("https://github.com/Gaztly/MyWebsite/blob/master/images/img-2.jpg?raw=true");
@@ -34,23 +34,58 @@ body {
   background-size: 1600px 1920px;
 }
 #fonts {
-  color: black;
+  color: white;
   text-align: center;
-  margin: 10px 100px 100px 100px;
   border-radius: 5px;
-  border: 5px silver;
-  border-style: ridge;
+  width: 50%;
+  margin-left: 25%;
   font-size: xx-large;
-  margin-top: 50px;
+  margin-top: 150px;
+  background-color: #333;
+}
+
+.aside {
+  width: 20%;
+  padding-left: 0px;
+  margin-left: 200px;
+  float: right;
+  text-align: center;
+  font-style: italic;
+}
+
+.aside-image {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0px;
+  object-fit: cover;
+  opacity: 0.7;
+  filter: blur(4px);
+  box-shadow: 3px 8px 8px rgb(8, 8, 8);
+  border-radius: 10px;
+}
+
+.aside:hover .aside-image {
+  transform-origin: 150%;
+  transform: scale(3);
+  transition: all 2s;
+  filter: blur(0px);
+  border-radius: 40px;
+  opacity: 1;
+}
+p {
+  background-color: rgb(255, 255, 255, 0.5);
+  color: black;
+  width: fit-content;
 }
 
 .navbar {
-  overflow: hidden;
+  overflow: auto;
   background-color: #333;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 90%;
   margin-top: 0px;
+  margin-left: 65px;
   justify-content: space-evenly;
   max-width: 100%;
 }
@@ -59,11 +94,139 @@ body {
   display: block;
   color: #f2f2f2;
   text-align: center;
+  width: 20%;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .navbar a:hover {
   background-color: #ddd;
   color: black;
+  transition: all 1.5s;
+}
+
+.patrick {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+
+.div1 {
+  grid-column: 1/3;
+  grid-row: 1/5;
+  width: 300px;
+  height: 200px;
+  border: 2px solid blue;
+  box-sizing: border-box;
+}
+
+.div2 {
+  grid-column: 2/5;
+  grid-row: 2/5;
+  width: 500px;
+  height: 200px;
+  border: 2px solid red;
+  box-sizing: border-box;
+}
+
+.card-container {
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  height: 450px;
+  border-radius: 15px;
+  position: relative;
+  outline: 1px solid rgb(255, 255, 255, 0.8);
+  outline-offset: -5px;
+  box-shadow: 3px 8px 10px rgb(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-color: #333;
+  margin: 10px;
+}
+
+.card:hover {
+  box-shadow: 9px 20px 30px rgb(0, 0, 0, 1);
+  transition: box-shadow 1s;
+}
+
+.card-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.card:hover .card-image {
+  transform: scale(1.2);
+  transition: transform 1s;
+  transform: translateY(-20%);
+  filter: blur(3px);
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1.5rem;
+  opacity: 0;
+  text-align: center;
+  transform: translateY(100%);
+}
+
+.card:hover .card-info {
+  opacity: 1;
+  transition: all 1s;
+  transform: translateY(0%);
+}
+
+.btn {
+  color: white;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  bottom: 0;
+  left: 40%;
+  background-color: #555;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+  transform: translateY(-40%);
+  outline: 2px solid white;
+}
+
+.btn:hover {
+  background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 200px;
+    height: auto;
+    aspect-ratio: 2/3;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card {
+    width: 120px;
+    height: auto;
+    aspect-ratio: 2/3;
+  }
 }
