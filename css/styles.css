@@ -10,15 +10,10 @@ body {
   background-color: gray;
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
+.smalltext {
+  color: white;
+  flex-wrap: inherit;
+  justify-content: space-around;
 }
 
 .titles {
@@ -41,16 +36,16 @@ body {
   margin-left: 25%;
   font-size: xx-large;
   margin-top: 150px;
-  background-color: #333;
+  background-color: rgb(54, 53, 53);
 }
 
 .aside {
   width: 20%;
-  padding-left: 0px;
-  margin-left: 200px;
+  padding-left: 10px;
   float: right;
   text-align: center;
   font-style: italic;
+  font-weight: bold;
 }
 
 .aside-image {
@@ -59,6 +54,7 @@ body {
   padding-bottom: 0px;
   object-fit: cover;
   opacity: 0.7;
+  outline: 2px solid rgb(110, 109, 109);
   filter: blur(4px);
   box-shadow: 3px 8px 8px rgb(8, 8, 8);
   border-radius: 10px;
@@ -69,8 +65,25 @@ body {
   transform: scale(3);
   transition: all 2s;
   filter: blur(0px);
-  border-radius: 40px;
+  border-radius: 50px;
+  box-shadow: 3px 86px 56px rgb(0, 0, 0, 1);
   opacity: 1;
+}
+.aside-text {
+  width: 100%;
+  height: 25%;
+  opacity: 0;
+  border-radius: 15px;
+  color: white;
+  background-color: rgb(60, 59, 59);
+  box-shadow: 10px 10px 10px rgb(0, 0, 0, 1);
+}
+.aside:hover .aside-text {
+  transform: translateX(-200%);
+  opacity: 1;
+  transition: all 3s;
+  font-weight: bolder;
+  font-size: 2.5rem;
 }
 p {
   background-color: rgb(255, 255, 255, 0.5);
@@ -107,6 +120,27 @@ p {
   transition: all 1.5s;
 }
 
+header {
+  margin-top: 150px;
+  color: whitesmoke;
+  outline-style: ridge;
+  width: 50%;
+  border-radius: 20px;
+  margin-left: 25%;
+  text-align: center;
+  font-size: 2.5rem;
+  background-color: #555;
+}
+
+footer {
+  margin-top: 34%;
+  padding: 4px;
+  position: sticky;
+  display: block;
+  max-width: 100%;
+  background-color: #333;
+}
+
 .patrick {
   display: flex;
   flex-wrap: wrap;
@@ -115,9 +149,9 @@ p {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   grid-template-rows: auto;
-  grid-gap: 10px;
+  grid-gap: 5px;
 }
 
 .div1 {
@@ -145,8 +179,8 @@ p {
 }
 
 .card {
-  width: 300px;
-  height: 450px;
+  width: 225px;
+  height: 350px;
   border-radius: 15px;
   position: relative;
   outline: 1px solid rgb(255, 255, 255, 0.8);
@@ -207,12 +241,25 @@ p {
   cursor: pointer;
   font-size: 16px;
   border-radius: 10px;
+  opacity: 0;
   transform: translateY(-40%);
   outline: 2px solid white;
 }
 
 .btn:hover {
+  color: goldenrod;
+}
+
+.card:hover .btn {
   background-color: black;
+  opacity: 1;
+  font-size: 30px;
+  border-radius: 30px;
+  width: 40%;
+  height: 45%;
+  left: 30%;
+  transform: translateY(-200px);
+  transition: all 2s;
 }
 
 @media screen and (max-width: 768px) {
