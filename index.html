@@ -5,16 +5,49 @@
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Patrick Snäll,Snaell,Funky,Funkytoad"; />
+    <script src="https://kit.fontawesome.com/3fe8931cbb.js" crossorigin="anonymous"></script>
+
+    <audio controls id="hurra">
+        <source src="./audio/mixkit-small-group-cheer-and-applause-518.wav" type="audio/wav">
+    </audio>
+    <script>
+        var sound1 = document.getElementById("hurra");
+        sound1.volume= 0.2;
+function playSound1() {
+sound1.play();
+play();
+}
+</script>
 </head>
-<body class="titles">
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="heartstone.html" target="_blank">Hearthstone</a>
+<body background="./images/background/bigbeast1.jpg" style="background-size:cover">
+
+<nav>
+
+    <div class="link">
+        <i class="fa-solid fa-atom"></i>
+                <a href="index.html">Home</a>
+    </div>
+    <div class="link">
+        <i class="fa-solid fa-heart"></i>
+                <a href="heartstone.html" target="_blank">Hearthstone Decks</a>
+    </div>
+    <div class="link">
+        <i class="fa-solid fa-play"></i>
+        <a href="twitch.html" target="_blank">Twitch</a>
+    </div>
+    <div class="link">
+        <i class="fa-solid fa-cubes"></i>
         <a href="https://github.com/Gaztly?tab=repositories" target="_blank">Projects</a>
+    </div>
+    <div class="link">
+        <i class="fa-brands fa-mailchimp"></i>
         <a href="patrick.html" target="_blank">About Me</a>
-      </div>
+    </div>
+
+        
+</nav>
     <header>Snäll</header>
-    <selection>
+    <section>
         <p>
             My name is Patrick Snäll and I'm currently studying to be a fullstack developer <br>
             at NBI/Handelsakademin located in Gothenburg. I'm currently 2 semesters in <br>
@@ -32,10 +65,17 @@
             <h4><span id="fonts">
 King Krush MVP
             </span></h4>
-                <img src="./images/KINGKRUSH.png" class="aside-image"/>
+                <img src="./images/KINGKRUSH.png" class="aside-image" onmouseenter="playSound1()"/>
                 <h4 class="aside-text">Kazakuzan Magic</h4>
+      
         </aside>
-    </selection>
+    </section>
+    <section>
+
+        <form>
+            <button onmouseenter="playSound1()">Click me</button>
+        </form>
+    </section>
 <footer> Help  Github Instagram                                        Facebook</footer>
 </body>
 

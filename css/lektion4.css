@@ -1,0 +1,87 @@
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+.link {
+  transform: translateX(-0.75em);
+  transition: all 200ms;
+  font-size: 26px;
+  color: #555;
+  opacity: 0.6;
+  font-family: fantasy;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+i {
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  opacity: 0;
+  transition: opacity 1s;
+  margin-right: 10px;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.link:hover i {
+  opacity: 1;
+  transition: 2s;
+}
+
+.link:hover {
+  transform: none;
+  color: black;
+  opacity: 1;
+  transition: opacity 2.5s;
+}
+.container1 {
+  display: flex;
+  justify-content: center;
+}
+.container-form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid black;
+  width: 30%;
+}
+input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 4px solid green;
+  width: 100%;
+  transition: width 1s;
+}
+.container-input {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#input_reset:hover {
+  color: red;
+  cursor: pointer;
+  font-weight: bolder;
+}
+#input_submit:hover {
+  cursor: pointer;
+  color: green;
+  font-weight: bolder;
+}
+
+form {
+  width: 70%;
+  max-width: 600px;
+  min-width: 200px;
+}
