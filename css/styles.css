@@ -23,7 +23,7 @@ a {
 }
 
 .titles {
-  background-image: url("https://github.com/Gaztly/MyWebsite/blob/master/images/img-home.jpg?raw=true");
+  background-image: url("/images/landscapes/img-2.jpg");
   border-image-width: auto;
   background-repeat: no-repeat;
   height: 800px;
@@ -42,12 +42,14 @@ a {
 }
 
 .aside {
+  position: relative;
   width: 20%;
   padding-left: 10px;
   float: right;
   text-align: center;
   font-style: italic;
   font-weight: bold;
+  z-index: 1;
 }
 
 .aside-image {
@@ -69,10 +71,11 @@ a {
   transition: all 2s;
   filter: blur(0px);
   border-radius: 50px;
-  box-shadow: 3px 86px 56px rgb(0, 0, 0, 1);
+  box-shadow: 3px 86px 56px rgb(0, 0, 0, 0.5);
   opacity: 1;
 }
 .aside-text {
+  font-size: 2em;
   width: 100%;
   height: 25%;
   opacity: 0;
@@ -92,18 +95,19 @@ p {
   background-color: rgb(255, 255, 255, 0.5);
   color: black;
   width: fit-content;
+  font-size: 1.2em;
 }
 
 .pfortwitch {
   font-family: fantasy;
-  font-size: 15px;
+  font-size: 1rem;
   color: black;
   width: auto;
   background-color: none;
   text-align: center;
   text-shadow: 3px 3px 3px white;
 }
-nav {
+.nav {
   display: flex;
   justify-content: center;
   margin: 10px;
@@ -112,7 +116,16 @@ nav {
   border-width: thick;
   background-color: rgb(255, 255, 255, 0.5);
   opacity: 0.8;
+  overflow: auto;
 }
+
+@media screen and (max-width: 600px) {
+  nav {
+    float: none;
+    display: block;
+  }
+}
+
 .link {
   transform: translateX(-1em);
   transition: all 400ms;
@@ -155,11 +168,13 @@ i {
 .container-form {
   display: flex;
   width: 100%;
+  top: 0;
   place-content: center;
-  flex-direction: column;
   flex-wrap: wrap;
 }
-
+/* Below are all CSS code for the page"twitch"
+It's to manipulate images to be circular and also adds some
+movement when you hover over to give some info etc.  */
 .twitch-card {
   width: 300px;
   height: 300px;
@@ -241,12 +256,13 @@ header {
 }
 footer {
   display: flex;
-  padding: 4px;
-  position: fixed;
+  height: 30px;
+  position: relative;
   display: inline-flex;
-  max-width: 100%;
-  bottom: 0;
+  width: 100%;
+  bottom: -10px;
   background-color: #333;
+  color: white;
 }
 
 audio {
@@ -259,10 +275,12 @@ audio {
 }
 
 .container {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(11, 1fr);
   grid-template-rows: auto;
   grid-gap: 5px;
+  text-align: center;
+  padding: 5%;
 }
 
 .card-container {
@@ -284,11 +302,30 @@ audio {
   opacity: 0.8;
   margin: 10px;
 }
-
+table,
+th,
+td {
+  border: 1px solid black;
+}
+.card1 {
+  width: fit-content;
+  height: 300px;
+  border-radius: 10px;
+  position: relative;
+  background-color: rgb(255, 255, 255, 0.5);
+}
 .card:hover {
   box-shadow: 20px 30px 30px rgb(0, 0, 0, 1);
   transition: all 2s;
   opacity: 1;
+}
+
+.input {
+  width: 80%;
+  text-align: center;
+  padding-left: 1 rem;
+  margin-left: 0.5rem;
+  outline: 5px 8px 16px rgb(135, 155, 155, 10px);
 }
 
 .card-image {
@@ -325,27 +362,49 @@ audio {
   transform: translateY(0%);
 }
 
+/* Using this for all-around button styling, as for inputs on firstpage */
+
 .btn {
   color: white;
-  position: absolute;
-  width: 20%;
-  height: 20%;
-  bottom: 0;
-  left: 40%;
+  position: relative;
+  width: fit-content;
+  height: 10%;
+  margin-left: 1rem;
   background-color: #555;
   cursor: pointer;
   font-size: 16px;
   border-radius: 10px;
-  opacity: 0;
-  transform: translateY(-40%);
-  outline: 2px solid white;
+  transform: translateY(40%);
+  outline: 3px solid white;
 }
 
-.btn:hover {
+.btn1 {
+  color: white;
+  position: absolute;
+  width: 50%;
+  height: 10%;
+  margin-left: 0.5rem;
+  background-color: #555;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+  transform: translateY(200px);
+  outline: 3px solid white;
+  filter: blur(6px);
+}
+
+.btn1:hover {
   color: goldenrod;
 }
 
-.card:hover .btn {
+/* Changes size of input on firstpage, shrinks when focused. */
+.input:focus {
+  width: 50%;
+  border: 5px green;
+  transition: all 2s;
+}
+
+.card:hover .btn1 {
   background-color: black;
   opacity: 1;
   font-size: 30px;
@@ -354,6 +413,7 @@ audio {
   height: 45%;
   left: 30%;
   transform: translateY(-200px);
+  filter: blur(0px);
   transition: all 2s;
 }
 

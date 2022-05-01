@@ -17,11 +17,12 @@ function playSound1() {
 sound1.play();
 play();
 }
+
 </script>
 </head>
 <body background="./images/background/bigbeast1.jpg" style="background-size:cover">
 
-<nav>
+<nav class="nav">
 
     <div class="link">
         <i class="fa-solid fa-atom"></i>
@@ -47,14 +48,46 @@ play();
         
 </nav>
     <header>Snäll</header>
-    <section>
-        <p>
-            Welcome to Snäll's Wonderland!
-            <br>
-            <br>
-            This website is to be 
 
-        </p>
+    <section>
+        <div class="container">
+
+            <p><span style="font-size:xx-large; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-left: 3em;"> Welcome to Snäll's Wonderland!</span>
+                <br>
+                <br>
+                This website is my very first homebrewed website and is a work in progress.<br/> 
+                I'm mostly experimenting with HTML and some JSS and slowly discovering <br/> how to work with all the tools available in CSS.
+                <br/>
+                <br/>
+                To have a subject to make this website a bit more cohesive I've choosen to <br/>
+                focus on the game HeartStone. So available on here you will find the streamers I <br/>
+                usually watch and also links to HSreplay for every class available on the platform.<br/> 
+                As I continue to work on this website I'll add more functionality and information. 
+                <br/>
+                <br/>
+                Enjoy your stay!
+            </p>
+            <div class="card1">
+
+                <h3 style="font-family:monospace;">Register</h3>
+                    <input class="input" type="text" name="Username" placeholder="Username" >
+                  
+                    <input class="input" type="email" name="email" placeholder="E-mail">
+                    <input class="input" type="password" name="password" placeholder="Password">
+                    <br/>
+                    <br/>
+                    <form><p style="margin-left:10em;">Select your preference </p>
+                        <input type="radio" id="hearthstone" name="radio1" value="Hearthstone">
+<label for="hearthstone">Heartstone</label><br/>
+<input type="radio" id="counterstrike" name="radio1" value="Counterstrike">
+<label for="counterstrike">Counter-Strike</label><br/>     
+<input type="radio" id="Wow" name="radio1" value="wow">
+<label for="wow">World of Warcraft</label><br/>
+               </form>
+                    <input class="btn" name="submit" type="submit">
+                    <input class="btn" name="reset" type="reset">
+            </div>
+        </div>
         <aside class="aside">
             <h4><span id="fonts">
 King Krush MVP
@@ -65,10 +98,30 @@ King Krush MVP
     </section>
     <section>
 
-        <form>
-            <button onmouseenter="playSound1()">Click me</button>
-        </form>
+        <form class="container">
+
+            <div class="card1">
+                <h2>Random Facts</h2>
+                <ul>
+<li>
+    The word robot was introduced in 1920 in a play by Karel Capek called R.U.R. , or Rossum's Universal Robots.
+</li>
+<br/>
+<li>While he completed only one opera, Beethoven wrote vocal music throughout his life, including two Mass settings, other works for chorus and orchestra</li>
+<br/>
+<li>Active volcanoes are rare in Australia because there are no plate boundaries on this continent. However, there are two active volcanoes located 4000 kilometres south west of Perth on the Australian territories.</li>                
+<br/>
+<li>When Adding a Second “PS” at the End of a Letter, It's “PPS”, Not “PSS” This, of course, is because “PS” stands for “postscript”. This comes from the Latin “post scriptum”.</li>
+</ul>
+<!-- Button to play sound/video, not decided yet. Added sound to check functionality -->
+<button onmouseenter="playSound1()" >Click me</button>
+
+            </div>
+
+            </form>
     </section>
+    
+
 <footer> Help  Github Instagram                                        Facebook</footer>
 </body>
 
